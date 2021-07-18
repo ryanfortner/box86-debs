@@ -112,3 +112,22 @@ Description: Linux Userspace x86 Emulator with a twist.
  on non-x86 Linux, like ARM
  (host system needs to be 32bit little-endian).
 
+Package: box86
+Version: 0.2.3+20210718.a62a9f6c-1
+Architecture: armhf
+Maintainer: root@box86-buildpi
+Installed-Size: 7216
+Conflicts: qemu-user-static
+Provides: box86
+Filename: ./box86_0.2.3+20210718.a62a9f6c-1_armhf.deb
+Size: 1454396
+MD5sum: 471c4166ee5c8396df44e388a00c1900
+SHA1: 89ba59dcd0f886a400354489d430aba961b2a162
+SHA256: a97dedf3d8ee850fcda6157c9359d05773a736e1c272b891fdf6758fb54ad37f
+Section: checkinstall
+Priority: extra
+Description: Linux Userspace x86 Emulator with a twist.
+ Box86 lets you run x86 Linux programs (such as games)
+ on non-x86 Linux, like ARM
+ (host system needs to be 32bit little-endian).
+
