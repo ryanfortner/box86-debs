@@ -1,8 +1,8 @@
 # Box86 Debian Packaging
 
-This is a simple Debian packaging repository for the [box86](https://github.com/ptitSeb/box86) project. It uses `debuild` and `dh_make` to compile and package box86.
+This is a simple Debian repository for the [box86](https://github.com/ptitSeb/box86) project. It uses `debuild` and `dh_make` to compile and package box86.
 
-### Install
+### DEB files
 To install the latest version of box86 you can simply download the latest version and install it with dpkg:
 ```
 wget https://ryanfortner.github.io/box86-debs/box86-latest.deb
@@ -19,3 +19,9 @@ wget -qO- https://ryanfortner.github.io/box86-debs/apt-repo/KEY.gpg | sudo apt-k
 sudo apt update && sudo apt install box86 -y
 ```
 
+### Packaging
+```
+git clone https://github.com/ptitSeb/box86.git && cd box86
+dpkg-buildpackage -us -uc -nc
+# package will be in the parent directory
+```
