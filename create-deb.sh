@@ -40,7 +40,7 @@ echo "box86 is not the latest version, compiling now."
 echo $commit > $DIRECTORY/commit.txt
 echo "Wrote commit to commit.txt file for use during the next compilation."
 mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DARM_DYNAREC=1 || error "Failed to run cmake."
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DRPI4=1 || error "Failed to run cmake."
 make -j4 || error "Failed to run make."
 
 function get-box86-version() {
