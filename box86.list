@@ -1,1 +1,1 @@
-deb https://ryanfortner.github.io/box86-debs/debian ./
+deb [signed-by=/usr/share/keyrings/box86-debs-archive-keyring.gpg] https://ryanfortner.github.io/box86-debs/debian ./
