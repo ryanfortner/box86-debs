@@ -32,8 +32,10 @@ git clone https://github.com/ptitSeb/box86 || error "Failed to download box86 re
 cd box86
 commit="$(bash -c 'git rev-parse HEAD | cut -c 1-7')"
 if [ "$commit" == "$LATESTCOMMIT" ]; then
+  cd "$DIRECTORY"
+  rm -rf "box86"
   echo "Box86 is already up to date. Exiting."
-  touch exited_succesfully.txt
+  touch exited_successfully.txt
   exit 0
 fi
 echo "box86 is not the latest version, compiling now."
