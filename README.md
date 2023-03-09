@@ -25,6 +25,15 @@ sudo apt update && sudo apt install box86 -y
 
 If you don't want to add this apt repository to your system, you can download and install the latest armhf deb from [here](https://github.com/ryanfortner/box86-debs/tree/master/debian).
 
+### Running box86 on ARM64 Systems
+It's possible to run box86 on an arm64 machine, but you need to add the armhf architecture through dpkg and then the appropriate package with the :armhf tag following. See the below example.
+```
+sudo dpkg --add-architecture armhf
+sudo apt-get update
+# proceed to add the repo using instructions above
+sudo apt-get install box86:armhf
+```
+
 ### Note for box64
 
 Please note that this repository is *only for box86*. If you would like deb packages for box64, check out [box64-debs](https://github.com/ryanfortner/box64-debs)
