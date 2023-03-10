@@ -5,7 +5,8 @@ This is a simple Debian repository for the [box86](https://github.com/ptitSeb/bo
 These debs have been compiled using various target CPUs and systems. You can see all the available pkgs below.
 
 ## Package List
-- ***SPECIAL NOTE: all packages are compiled for native armhf, even the ones with ARM64 in their target name!***
+***SPECIAL NOTE: all packages are compiled for native armhf, even the ones with ARM64 in their target name!***
+
 Package Name | Notes | Install Command |
 ------------ | ------------- | ------------- |
 | box86 | box86 built for RPI4ARM64 target. | `sudo apt install box86` |
