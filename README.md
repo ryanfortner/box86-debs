@@ -9,11 +9,14 @@ These debs have been compiled using various target CPUs and systems. You can see
 
 Package Name | Notes | Install Command |
 ------------ | ------------- | ------------- |
-| box86 | box86 built for RPI4ARM64 target. | `sudo apt install box86` |
-| box86-rpi3arm64 | box86 built for RPI3ARM64 target. | `sudo apt install box86-rpi3arm64` |
-| box86-generic-arm | box86 built for generic ARM systems. | `sudo apt install box86-generic-arm` |
-| box86-tegrax1 | box86 built for Tegra X1 systems. | `sudo apt install box86-tegrax1` |
-| box86-rk3399 | box86 built for rk3399 cpu target. | `sudo apt install box86-rk3399` |
+| box86 | box86 built for RPI4ARM64 target | `sudo apt install box86` |
+| box86-rpi3arm64 | box86 built for RPI3ARM64 target | `sudo apt install box86-rpi3arm64` |
+| box86-generic-arm | box86 built for generic ARM systems | `sudo apt install box86-generic-arm` |
+| box86-tegrax1 | box86 built for Tegra X1 systems | `sudo apt install box86-tegrax1` |
+| box86-rk3588 | box86 built for rk3588/rk3588s cpu target | `sudo apt install box86-rk3588`|
+| box86-rk3399 | box86 built for rk3399 cpu target | `sudo apt install box86-rk3399` |
+| box86-rk3288 | box86 built for rk3288 cpu target | `sudo apt install box86-rk3288`|
+| box86-a64 | box86 built for Allwinner A64 based devices (A64 target) | `sudo apt install box86-a64` |
 
 Want me to build for more platforms? Open an issue. 
 
