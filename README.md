@@ -5,7 +5,7 @@ This is a simple Debian repository for the [box86](https://github.com/ptitSeb/bo
 These debs have been compiled using various target CPUs and systems. You can see all the available pkgs below.
 
 ## Package List
-***SPECIAL NOTE: all packages are compiled for native armhf, even the ones with ARM64 in their target name!***
+***SPECIAL NOTE: all packages are compiled for native armhf, even the ones with ARM64 in their target name! It's possible to run them on arm64 systems but you need to either run a [multiarch](https://github.com/ryanfortner/box86-debs#running-box86-on-arm64-systems) or [compile from source](https://github.com/ptitSeb/box86/blob/master/docs/COMPILE.md#for-other-arm64-64bits-linux-platform).***
 
 Package Name | Notes | Install Command |
 ------------ | ------------- | ------------- |
