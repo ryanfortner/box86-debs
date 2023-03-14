@@ -42,7 +42,7 @@ echo "box86 is not the latest version, compiling now."
 echo $commit > $DIRECTORY/commit.txt
 echo "Wrote commit to commit.txt file for use during the next compilation."
 
-targets=(ARM64 RPI4ARM64 RPI3ARM64 TEGRAX1 RK3588 RK3399 RK3288 A64)
+targets=(ARM64 RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
 
 for target in ${targets[@]}; do
 
