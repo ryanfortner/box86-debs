@@ -48,7 +48,11 @@ for target in ${targets[@]}; do
 
   cd $DIRECTORY/box86
   sudo rm -rf build && mkdir build && cd build || error "Could not move to build directory"
-  cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
+  if [[ $target == "ARM64" ]]; then
+    cmake .. -D$target=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
+  else
+    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
+  fi
   make -j4 || error "Failed to run make."
 
   function get-box86-version() {
