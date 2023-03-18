@@ -42,14 +42,14 @@ echo "box86 is not the latest version, compiling now."
 echo $commit > $DIRECTORY/commit.txt
 echo "Wrote commit to commit.txt file for use during the next compilation."
 
-targets=(ARM64 RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
+targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
 
 for target in ${targets[@]}; do
 
   cd $DIRECTORY/box86
   sudo rm -rf build && mkdir build && cd build || error "Could not move to build directory"
-  if [[ $target == "ARM64" ]]; then
-    cmake .. -D$target=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
+  if [[ $target == "ANDROID" ]]; then
+    cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
   else
     cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
   fi
