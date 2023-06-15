@@ -78,10 +78,17 @@ for target in ${targets[@]}; do
   echo 'Restarting systemd-binfmt...'
   systemctl restart systemd-binfmt || true" > postinstall-pak || error "Failed to create postinstall-pak!"
 
+  conflict_list="qemu-user-static"
+  for value in "${targets[@]}"; do
+    if [[ $value != $target ]]; then
+      [[ $value == "ARM64" ]] && value="GENERIC_ARM"
+      conflict_list+=", box86-$(echo $value | tr '[:upper:]' '[:lower:]' | tr _ - | sed -r 's/ /, /g')"
+    fi
+  done
   if [[ $target == "ARM64" ]]; then
-    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="qemu-user-static" --pkgname="box86-generic-arm" --install="no" make install || error "Checkinstall failed to create a deb package."
+    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --pkgname="box86-generic-arm" --install="no" make install || error "Checkinstall failed to create a deb package."
   else
-    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="qemu-user-static" --pkgname="box86-$target" --install="no" make install || error "Checkinstall failed to create a deb package."
+    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --pkgname="box86-$target" --install="no" make install || error "Checkinstall failed to create a deb package."
   fi
 
   cd $DIRECTORY
