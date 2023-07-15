@@ -42,9 +42,10 @@ echo "box86 is not the latest version, compiling now."
 echo $commit > $DIRECTORY/commit.txt
 echo "Wrote commit to commit.txt file for use during the next compilation."
 
-targets=(RK3588 ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
+targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 RK3588)
 
 for target in ${targets[@]}; do
+  echo "Building $target"
 
   cd $DIRECTORY/box86
   sudo rm -rf build && mkdir build && cd build || error "Could not move to build directory"
