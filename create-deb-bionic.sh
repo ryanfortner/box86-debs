@@ -3,7 +3,7 @@
 DIRECTORY="/github/workspace"
 export DEBIAN_FRONTEND=noninteractive
 
-LATESTCOMMIT=`cat $DIRECTORY/commit.txt`
+LATESTCOMMIT=`cat $DIRECTORY/commit-bionic.txt`
 
 function error() {
 	echo -e "\e[91m$1\e[39m"
@@ -19,7 +19,7 @@ cd $DIRECTORY
 
 # install dependencies
 apt-get update
-apt-get install wget git build-essential gcc-9 python3 make gettext pinentry-tty sudo devscripts dpkg-dev -y || error "Failed to install dependencies"
+apt-get install wget git build-essential gcc-8 python3 make gettext pinentry-tty sudo devscripts dpkg-dev -y || error "Failed to install dependencies"
 git clone https://github.com/ryanfortner/checkinstall || error "Failed to clone checkinstall repo"
 cd checkinstall
 sudo make install || error "Failed to run make install for Checkinstall!"
@@ -39,10 +39,10 @@ if [ "$commit" == "$LATESTCOMMIT" ]; then
   exit 0
 fi
 echo "box86 is not the latest version, compiling now."
-echo $commit > $DIRECTORY/commit.txt
-echo "Wrote commit to commit.txt file for use during the next compilation."
+echo $commit > $DIRECTORY/commit-bionic.txt
+echo "Wrote commit to commit-bionic.txt file for use during the next compilation."
 
-targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 RK3588)
+targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
 
 for target in ${targets[@]}; do
   echo "Building $target"
@@ -50,9 +50,9 @@ for target in ${targets[@]}; do
   cd $DIRECTORY/box86
   sudo rm -rf build && mkdir build && cd build || error "Could not move to build directory"
   if [[ $target == "ANDROID" ]]; then
-    cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-9 || error "Failed to run cmake."
+    cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
   else
-    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-9 || error "Failed to run cmake."
+    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-8 || error "Failed to run cmake."
   fi
   make -j4 || error "Failed to run make."
 
