@@ -35,6 +35,10 @@ echo "Wrote commit to commit-bionic.txt file for use during the next compilation
 
 targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
 
+# Update this var with each added target in the repo.
+# Ensures that no two builds can be installed together.
+alltargets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 RK3588)
+
 for target in ${targets[@]}; do
   echo "Building $target"
 
@@ -73,7 +77,7 @@ for target in ${targets[@]}; do
   systemctl restart systemd-binfmt || true" > postinstall-pak || error "Failed to create postinstall-pak!"
 
   conflict_list="qemu-user-static"
-  for value in "${targets[@]}"; do
+  for value in "${alltargets[@]}"; do
     if [[ $value != $target ]]; then
       [[ $value == "ARM64" ]] && value="GENERIC_ARM"
       conflict_list+=", box86-$(echo $value | tr '[:upper:]' '[:lower:]' | tr _ - | sed -r 's/ /, /g')"
