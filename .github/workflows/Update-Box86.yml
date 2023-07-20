@@ -94,6 +94,8 @@ jobs:
       run:
         shell: bash
 
+    needs: update-box86-bionic
+
     steps:
       - name: Install dependencies
         run: |
