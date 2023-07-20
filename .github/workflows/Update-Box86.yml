@@ -41,6 +41,8 @@ jobs:
           git config --global --add safe.directory '*'
 
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
 
       - name: Install checkinstall
         run: |
@@ -121,6 +123,8 @@ jobs:
           git config --global --add safe.directory '*'
 
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
 
       - name: Install checkinstall
         run: |
