@@ -7,15 +7,15 @@ These debs have been compiled using various target CPUs and systems. You can see
 ## Package List
 ***SPECIAL NOTE: all packages are compiled for native armhf, even the ones with ARM64 in their target name! It's possible to run them on arm64 systems but you need to either run a [multiarch](https://github.com/ryanfortner/box86-debs#running-box86-on-arm64-systems) or [compile from source](https://github.com/ptitSeb/box86/blob/master/docs/COMPILE.md#for-other-arm64-64bits-linux-platform).***
 
-Package Name | Notes | Install Command |
------------- | ------------- | ------------- |
-| box86-rpi4arm64 | box86 built for RPI4ARM64 target. | `sudo apt install box86-rpi4arm64` |
-| box86-rpi3arm64 | box86 built for RPI3ARM64 target. | `sudo apt install box86-rpi3arm64` |
-| box86-generic-arm | box86 built for generic ARM systems. | `sudo apt install box86-generic-arm` |
-| box86-tegrax1 | box86 built for Tegra X1 systems. | `sudo apt install box86-tegrax1` |
-| box86-rk3399 | box86 built for rk3399 cpu target. | `sudo apt install box86-rk3399` |
-| box86-android | box86 built with the `-DBAD_SIGNAL=ON` flag | `sudo apt install box86-android` |
-| box86-rk3588 | box86 built for rk3588 target | `sudo apt install box86-rk3588` |
+Package Name | Target Distro | Notes | Install Command |
+------------ | ------------- | ------------- | ------------- |
+| box86-rpi4arm64 | >= Ubuntu 18.04 | box86 built for RPI4ARM64 target. | `sudo apt install box86-rpi4arm64` |
+| box86-rpi3arm64 | >= Ubuntu 18.04 | box86 built for RPI3ARM64 target. | `sudo apt install box86-rpi3arm64` |
+| box86-generic-arm | >= Ubuntu 18.04 | box86 built for generic ARM systems. | `sudo apt install box86-generic-arm` |
+| box86-tegrax1 | >= Ubuntu 18.04 | box86 built for Tegra X1 systems. | `sudo apt install box86-tegrax1` |
+| box86-rk3399 | >= Ubuntu 18.04 | box86 built for rk3399 cpu target. | `sudo apt install box86-rk3399` |
+| box86-android | >= Ubuntu 18.04 | box86 built with the `-DBAD_SIGNAL=ON` flag | `sudo apt install box86-android` |
+| box86-rk3588 | >= Ubuntu 20.04 | box86 built for rk3588 target | `sudo apt install box86-rk3588` |
 
 Want me to build for more platforms? Open an issue. 
 
