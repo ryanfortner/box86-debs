@@ -17,15 +17,6 @@ rm -rf $DIRECTORY/box86
 
 cd $DIRECTORY
 
-# install dependencies
-apt-get update
-apt-get install wget git build-essential gcc-9 python3 make gettext pinentry-tty sudo devscripts dpkg-dev -y || error "Failed to install dependencies"
-git clone https://github.com/ryanfortner/checkinstall || error "Failed to clone checkinstall repo"
-cd checkinstall
-sudo make install || error "Failed to run make install for Checkinstall!"
-cd .. && rm -rf checkinstall
-sudo apt install -yf ./resources/cmake_3.24.2-25.1_armhf.deb || error "Failed to install latest cmake package!"
-
 rm -rf box86
 
 git clone https://github.com/ptitSeb/box86 || error "Failed to download box86 repo"
@@ -49,16 +40,18 @@ for target in ${targets[@]}; do
 
   cd $DIRECTORY/box86
   sudo rm -rf build && mkdir build && cd build || error "Could not move to build directory"
+  # allow installation even on x86_64 (needed for checkinstall)
+  sed -i "s/NOT _x86 AND NOT _x86_64/true/g" ../CMakeLists.txt
   if [[ $target == "ANDROID" ]]; then
-    cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-9 || error "Failed to run cmake."
+    cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc-9 -DCMAKE_C_FLAGS=-marm || error "Failed to run cmake."
   else
-    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=gcc-9 || error "Failed to run cmake."
+    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc-9 -DCMAKE_C_FLAGS=-marm || error "Failed to run cmake."
   fi
-  make -j4 || error "Failed to run make."
+  make -j8 || error "Failed to run make."
 
   function get-box86-version() {
     if [[ $1 == "ver" ]]; then
-      export BOX86VER="$(./box86 -v | cut -c21-25)"
+      export BOX86VER="$(qemu-arm-static ./box86 -v | cut -c21-25)"
     elif [[ $1 == "commit" ]]; then
       export BOX86COMMIT="$commit"
     fi
