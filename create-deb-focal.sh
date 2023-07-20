@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="/github/workspace"
+DIRECTORY=$(pwd)
 export DEBIAN_FRONTEND=noninteractive
 
 LATESTCOMMIT=`cat $DIRECTORY/commit-focal.txt`
@@ -15,7 +15,7 @@ function error() {
 
 rm -rf $DIRECTORY/box86
 
-cd $DIRECTORY
+cd $DIRECTORY || error "Failed to enter $DIRECTORY"
 
 rm -rf box86
 
