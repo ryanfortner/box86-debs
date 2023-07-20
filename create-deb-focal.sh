@@ -80,9 +80,9 @@ for target in ${targets[@]}; do
     fi
   done
   if [[ $target == "ARM64" ]]; then
-    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --pkgname="box86-generic-arm" --install="no" make install || error "Checkinstall failed to create a deb package."
+    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --maintainer="Ryan Fortner <ryankfortner@gmail.com>" --pkglicense="MIT" --pkgsource="https://github.com/ptitSeb/box86" --pkggroup="utils" --pkgname="box86-generic-arm" --install="no" make install || error "Checkinstall failed to create a deb package."
   else
-    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --pkgname="box86-$target" --install="no" make install || error "Checkinstall failed to create a deb package."
+    sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="$conflict_list" --maintainer="Ryan Fortner <ryankfortner@gmail.com>" --pkglicense="MIT" --pkgsource="https://github.com/ptitSeb/box86" --pkggroup="utils" --pkgname="box86-$target" --install="no" make install || error "Checkinstall failed to create a deb package."
   fi
 
   cd $DIRECTORY
