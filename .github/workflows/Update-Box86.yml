@@ -51,7 +51,7 @@ jobs:
 
       - name: Build debs (bionic)
         run: |
-          ./create-deb-bionic.sh || true
+          bash create-deb-bionic.sh || true
 
       - name: Import GPG key
         id: import_gpg
@@ -131,7 +131,7 @@ jobs:
 
       - name: Build debs (focal)
         run: |
-          ./create-deb-focal.sh || true
+          bash create-deb-focal.sh || true
 
       - name: Import GPG key
         id: import_gpg
