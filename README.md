@@ -41,3 +41,9 @@ sudo apt-get install box86-rpi4arm64:armhf
 ### Note for box64
 
 Please note that this repository is *only for box86*. If you would like deb packages for box64, check out [box64-debs](https://github.com/ryanfortner/box64-debs)
+
+
+#### Technical details
+Build scripts were split into two: one for Ubuntu Bionic (which builds on gcc-8) and one for Ubuntu Focal (which builds on gcc-9). Some newer targets require gcc-9 which is why I have that script. The goal is to compile each build with the best compatibility with most widely-used debian systems.
+
+When adding a target to the build scripts, make sure `alltargets` variable in both buildscripts is updated. This ensures that the conflicts list within each deb is written correctly.
