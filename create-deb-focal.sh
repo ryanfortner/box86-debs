@@ -7,8 +7,8 @@ LATESTCOMMIT=`cat $DIRECTORY/commit-focal.txt`
 
 function error() {
 	echo -e "\e[91m$1\e[39m"
-    rm -f $COMMITFILE
-    rm -rf $DIRECTORY/box86
+  rm -f $COMMITFILE
+  rm -rf $DIRECTORY/box86
 	exit 1
  	break
 }
