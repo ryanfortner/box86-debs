@@ -33,11 +33,11 @@ echo "box86 is not the latest version, compiling now."
 echo $commit > $DIRECTORY/commit-bionic.txt
 echo "Wrote commit to commit-bionic.txt file for use during the next compilation."
 
-targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399)
+targets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 SD845 SD888)
 
 # Update this var with each added target in the repo.
 # Ensures that no two builds can be installed together.
-alltargets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 RK3588)
+alltargets=(ARM64 ANDROID RPI4ARM64 RPI3ARM64 TEGRAX1 RK3399 RK3588 SD845 SD888)
 
 for target in ${targets[@]}; do
   echo "Building $target"
