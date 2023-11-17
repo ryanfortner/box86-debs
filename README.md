@@ -16,6 +16,8 @@ Package Name | Target Distro | Notes | Install Command |
 | box86-rk3399 | >= Ubuntu 18.04 | box86 built for rk3399 cpu target. | `sudo apt install box86-rk3399` |
 | box86-android | >= Ubuntu 18.04 | box86 built with the `-DBAD_SIGNAL=ON` flag | `sudo apt install box86-android` |
 | box86-rk3588 | >= Ubuntu 20.04 | box86 built for rk3588 target | `sudo apt install box86-rk3588` |
+| box86-sd845 | >= Ubuntu 18.04 | box86 built for Snapdragon 845 target | `sudo apt install box86-sd845` |
+| box86-sd888 | >= Ubuntu 18.04 | box86 built for Snapdragon 888 target | `sudo apt install box86-sd888` |
 
 Want me to build for more platforms? Open an issue. 
 
