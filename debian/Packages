@@ -1698,6 +1698,23 @@ Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
  Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
 
+Package: box86-android
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29088
+Conflicts: qemu-user-static, box86-generic-arm, box86-rpi4arm64, box86-rpi3arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-android_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5183292
+MD5sum: 04d381465982c22af2321154caef8482
+SHA1: ae5f5501595ca8181389fe0871d46debb8e5264e
+SHA256: 7a8ba1d28eef0ac6da28daceba7a6d038000f72c9f29aaabd76567bbd0769497
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
 Package: box86-generic-arm
 Version: 0.2.9+20230309.99059ff-1
 Architecture: armhf
@@ -3466,6 +3483,23 @@ Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
  Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
 
+Package: box86-generic-arm
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29088
+Conflicts: qemu-user-static, box86-android, box86-rpi4arm64, box86-rpi3arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-generic-arm_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5179152
+MD5sum: 15c41a68b256d3feccc9c765bf965606
+SHA1: f3c9b8a11a55d1150d491adc0199c16b6ab90265
+SHA256: 103273d351aa909fca064940217d3118396f10c1dfbef7f4990ecff7359faceb
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
 Package: box86-rk3399
 Version: 0.2.9+20230309.99059ff-1
 Architecture: armhf
@@ -5229,6 +5263,23 @@ Size: 5461588
 MD5sum: 680992b6c881417fa31f0979bbda0ce1
 SHA1: 8b5ad3f58a5733c6bcebf4f7a520f84808b4303d
 SHA256: 38b1fbe83f07a5b675605ee04977055c133303db74aa26cf7b06398926c1f03b
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
+Package: box86-rk3399
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29340
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi4arm64, box86-rpi3arm64, box86-tegrax1, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-rk3399_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5235884
+MD5sum: fc22b7b1bb2aa1911aef953934999d42
+SHA1: 9a51bc39d13cc6c414f9582f1e075e2bbaca5877
+SHA256: f91b0c9ac10ab1cc328a7d230d9388179d60df23bf9eca3f839836a0965aa0eb
 Section: utils
 Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
@@ -8039,6 +8090,23 @@ Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
  Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
 
+Package: box86-rpi3arm64
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29092
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi4arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-rpi3arm64_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5185864
+MD5sum: 56e70b2ed14a0e1b41b6c1dd241f993c
+SHA1: c99076654846f0e34668b192f4eedf1d932e6717
+SHA256: 945d4490a2d79af0ecc90d7652363660fd19dd9693ee6bc22cc61bad607a3f1d
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
 Package: box86-rpi4arm64
 Version: 0.3.1+20230323.1a0888c-1
 Architecture: armhf
@@ -9671,6 +9739,23 @@ Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
  Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
 
+Package: box86-rpi4arm64
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29340
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi3arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-rpi4arm64_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5236000
+MD5sum: aac74c9f81bca0fb112afa2f173ec08a
+SHA1: e4c5013efc961455a75eb55e7d57506f536ac6b6
+SHA256: 5df758b44830de921871a38a330af3fc3078cdfb932b361d7c480d102e4d8a44
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
 Package: box86-sd845
 Version: 0.3.3+20231117.fd3dcf3-1
 Architecture: armhf
@@ -9926,6 +10011,23 @@ Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
  Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
 
+Package: box86-sd845
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29412
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi4arm64, box86-rpi3arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd888
+Provides: box86
+Filename: ./box86-sd845_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5232852
+MD5sum: 499e21492cc1e642d38fcfb0b07ce8dc
+SHA1: b51091ebd576f240b8a4fe4b0e60263a2b7de72b
+SHA256: 6c76065e117ac1180108cd532520201cecf62ed2a0394dec163a22bb25c80845
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
 Package: box86-sd888
 Version: 0.3.3+20231117.fd3dcf3-1
 Architecture: armhf
@@ -10176,6 +10278,23 @@ Size: 5407676
 MD5sum: 52c4e823685e29ec0fc38f10953e816d
 SHA1: 96742c3be2b4bda54223dfacbb23912cfda886aa
 SHA256: 38a24760ab0be802069c7e4c1ca4afcb34b1a952d09c26ef8d8f3edebf34902f
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
+Package: box86-sd888
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29088
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi4arm64, box86-rpi3arm64, box86-tegrax1, box86-rk3399, box86-rk3588, box86-sd845
+Provides: box86
+Filename: ./box86-sd888_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5178104
+MD5sum: 2922204d51550f078d036aebdf485ddc
+SHA1: b8c2db06697ca5e377554783237493fbccf50beb
+SHA256: f3d79a7e8d765224120375bc38435cb3a7d20d4ce2cedd785ca8c8b4454218b6
 Section: utils
 Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
@@ -11944,6 +12063,23 @@ Size: 5456516
 MD5sum: 7e23abaa4a0e58d67f849b9562b0a94e
 SHA1: b920cbf5a13e864d3fa98e779746113575e18e9a
 SHA256: 48bb90b524779ea653a88b31ee871c4b162ac6d2c7822f5cf4b789f4e1af3500
+Section: utils
+Priority: extra
+Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+ Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
+
+Package: box86-tegrax1
+Version: 0.3.3+20231207.507b683-1
+Architecture: armhf
+Maintainer: root@f768291c4320
+Installed-Size: 29336
+Conflicts: qemu-user-static, box86-generic-arm, box86-android, box86-rpi4arm64, box86-rpi3arm64, box86-rk3399, box86-rk3588, box86-sd845, box86-sd888
+Provides: box86
+Filename: ./box86-tegrax1_0.3.3+20231207.507b683-1_armhf.deb
+Size: 5231072
+MD5sum: c325137f8c2b7232c9dd58c1994ca62c
+SHA1: e2f05bfbbbf4dee81c804eb00036a39286f31794
+SHA256: e296dc75e3039cdbf4400408d0b2836ccf483d17ae8ebb4c0db614760876b539
 Section: utils
 Priority: extra
 Description: Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 32bit little-endian)
