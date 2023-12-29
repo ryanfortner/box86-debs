@@ -94,6 +94,11 @@ for target in ${targets[@]}; do
 
 done
 
+# only keep last 4 debs for each target
+# keeps github pages builds fast and below 1GB suggested limit
+cd $DIRECTORY
+ls ./debian/box86-*.deb | sort -t '+' -k 2 | head -n -24 | xargs -r rm
+
 rm -rf $DIRECTORY/box86
 
 echo "Script complete."
