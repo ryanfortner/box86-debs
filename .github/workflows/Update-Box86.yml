@@ -9,8 +9,8 @@ on:
 
 jobs:
   update-box86-focal:
-    runs-on: ubuntu-22.04
-    container: ubuntu:22.04
+    runs-on: ubuntu-20.04
+    container: ubuntu:20.04
     defaults:
       run:
         shell: bash
