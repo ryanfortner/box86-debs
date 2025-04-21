@@ -6,7 +6,11 @@ apt install -y software-properties-common lsb-release \
 sudo wget curl build-essential jq autoconf automake \
 pkg-config ca-certificates rpm apt-utils \
 python3 make gettext pinentry-tty devscripts dpkg-dev \
-gcc-11 g++-11
+gcc-11 g++-11 \
+gcc-11-arm-linux-gnueabihf g++-11-arm-linux-gnueabihf binutils-arm-linux-gnueabihf pkg-config-arm-linux-gnueabihf
+sudo dpkg --add-architecture armhf
+sudo apt update
+sudo apt install -y libc6:armhf
 
 # Install new enough git to run actions/checkout
 sudo add-apt-repository ppa:git-core/ppa -y
