@@ -58,7 +58,7 @@ jobs:
             git config http.postBuffer 3221225472
             git config --global user.email "ryankfortner@gmail.com"
             git config --global user.name "ryanfortner"
-            bash -c "git add . && git commit -m 'Update box86 to commit $(cat commit.txt)'" || true
+            bash -c "git add . && git commit -m 'Update box86 to commit $(cat commit-focal.txt)'" || true
             git push
 
 # name: Update-Box86
