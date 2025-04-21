@@ -2,7 +2,7 @@
 
 # Add dependencies expected by scripts
 apt update
-apt install -y software-properties-common lsb-release \
+apt install -y git software-properties-common lsb-release \
 sudo wget curl build-essential jq autoconf automake \
 pkg-config ca-certificates rpm apt-utils \
 python3 make gettext pinentry-tty devscripts dpkg-dev \
